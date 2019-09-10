@@ -25,10 +25,10 @@
       const ReactTag = React.createElement(
         'div',
         {className: 'react-div'},
-        ReactPTag('Apple', 'apple_react_tag'),
-        ReactPTag('Orage', 'orange_react_tag'),
-        ReactPTag('Graps', 'graps_react_tag'),
-        ReactPTag('Banana', 'banga_react_tag'),
+        [
+          {fruit: 'apple', class: 'apple_tag'},
+          {fruit: 'banana', class: 'banana_tag'},
+        ].map(e => ReactPTag(e.fruit, e.class)),
       );
       console.log('reactTag', ReactTag);
       ReactDOM.render(ReactTag, document.getElementById('root'));
