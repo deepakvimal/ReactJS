@@ -18,16 +18,17 @@
       console.log('document:::', document);
       console.log('React:::', React);
       console.log('React-Dom:::', ReactDOM);
-      const ReactPTag = React.createElement(
-        'p',
-        {className: 'react-p'},
-        'Hello World From React',
-      );
+      function ReactPTag(children, className) {
+        return React.createElement('p', {className}, children);
+      }
 
       const ReactTag = React.createElement(
         'div',
         {className: 'react-div'},
-        ReactPTag,
+        ReactPTag('Apple', 'apple_react_tag'),
+        ReactPTag('Orage', 'orange_react_tag'),
+        ReactPTag('Graps', 'graps_react_tag'),
+        ReactPTag('Banana', 'banga_react_tag'),
       );
       console.log('reactTag', ReactTag);
       ReactDOM.render(ReactTag, document.getElementById('root'));
