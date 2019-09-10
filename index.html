@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>
+      React js
+    </title>
+    <script
+      src="https://unpkg.com/react@16/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      console.log('document:::', document);
+      console.log('React:::', React);
+      console.log('React-Dom:::', ReactDOM);
+      const ReactPTag = React.createElement(
+        'p',
+        {className: 'react-p'},
+        'Hello World From React',
+      );
+
+      const ReactTag = React.createElement(
+        'div',
+        {className: 'react-div'},
+        ReactPTag,
+      );
+      console.log('reactTag', ReactTag);
+      ReactDOM.render(ReactTag, document.getElementById('root'));
+    </script>
+  </body>
+</html>
